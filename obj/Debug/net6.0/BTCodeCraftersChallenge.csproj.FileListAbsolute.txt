@@ -1,0 +1,15 @@
+C:\Users\popan\source\repos\BTCodeCraftersChallenge\bin\Debug\net6.0\BTCodeCraftersChallenge.exe
+C:\Users\popan\source\repos\BTCodeCraftersChallenge\bin\Debug\net6.0\BTCodeCraftersChallenge.deps.json
+C:\Users\popan\source\repos\BTCodeCraftersChallenge\bin\Debug\net6.0\BTCodeCraftersChallenge.runtimeconfig.json
+C:\Users\popan\source\repos\BTCodeCraftersChallenge\bin\Debug\net6.0\BTCodeCraftersChallenge.dll
+C:\Users\popan\source\repos\BTCodeCraftersChallenge\bin\Debug\net6.0\BTCodeCraftersChallenge.pdb
+C:\Users\popan\source\repos\BTCodeCraftersChallenge\obj\Debug\net6.0\BTCodeCraftersChallenge.csproj.AssemblyReference.cache
+C:\Users\popan\source\repos\BTCodeCraftersChallenge\obj\Debug\net6.0\BTCodeCraftersChallenge.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\popan\source\repos\BTCodeCraftersChallenge\obj\Debug\net6.0\BTCodeCraftersChallenge.AssemblyInfoInputs.cache
+C:\Users\popan\source\repos\BTCodeCraftersChallenge\obj\Debug\net6.0\BTCodeCraftersChallenge.AssemblyInfo.cs
+C:\Users\popan\source\repos\BTCodeCraftersChallenge\obj\Debug\net6.0\BTCodeCraftersChallenge.csproj.CoreCompileInputs.cache
+C:\Users\popan\source\repos\BTCodeCraftersChallenge\obj\Debug\net6.0\BTCodeCraftersChallenge.dll
+C:\Users\popan\source\repos\BTCodeCraftersChallenge\obj\Debug\net6.0\refint\BTCodeCraftersChallenge.dll
+C:\Users\popan\source\repos\BTCodeCraftersChallenge\obj\Debug\net6.0\BTCodeCraftersChallenge.pdb
+C:\Users\popan\source\repos\BTCodeCraftersChallenge\obj\Debug\net6.0\BTCodeCraftersChallenge.genruntimeconfig.cache
+C:\Users\popan\source\repos\BTCodeCraftersChallenge\obj\Debug\net6.0\ref\BTCodeCraftersChallenge.dll

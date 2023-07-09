@@ -1,0 +1,6 @@
+C:\Users\popan\source\repos\BTCodeCraftersChallenge\BTCodeCraftersChallengeFacts\bin\Debug\net6.0\CoverletSourceRootsMapping
+C:\Users\popan\source\repos\BTCodeCraftersChallenge\BTCodeCraftersChallengeFacts\obj\Debug\net6.0\BTCodeCraftersChallengeFacts.csproj.AssemblyReference.cache
+C:\Users\popan\source\repos\BTCodeCraftersChallenge\BTCodeCraftersChallengeFacts\obj\Debug\net6.0\BTCodeCraftersChallengeFacts.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\popan\source\repos\BTCodeCraftersChallenge\BTCodeCraftersChallengeFacts\obj\Debug\net6.0\BTCodeCraftersChallengeFacts.AssemblyInfoInputs.cache
+C:\Users\popan\source\repos\BTCodeCraftersChallenge\BTCodeCraftersChallengeFacts\obj\Debug\net6.0\BTCodeCraftersChallengeFacts.AssemblyInfo.cs
+C:\Users\popan\source\repos\BTCodeCraftersChallenge\BTCodeCraftersChallengeFacts\obj\Debug\net6.0\BTCodeCraftersChallengeFacts.csproj.CoreCompileInputs.cache
