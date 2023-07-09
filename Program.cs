@@ -6,6 +6,7 @@
         {
             long userId = 42;
             DateTime dateTime = DateTime.Now;
+            Console.WriteLine(dateTime);
 
             TOTPSystem totpGenerator = new TOTPSystem();
             string otp = totpGenerator.GenerateTOTP(userId, dateTime);

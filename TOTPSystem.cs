@@ -6,17 +6,17 @@ namespace BTCodeCraftersChallenge
         private const int ValidityPeriodSeconds = 30;
         public struct OTPData
         {
-            internal OTPData(string otp, DateTime expiryTime)
+            public OTPData(string otp, DateTime expiryDateTime)
             {
                 Otp = otp;
-                ExpiryTime = expiryTime;
+                ExpiryDateTime = expiryDateTime;
             }
 
             internal string Otp { get; init; }
-            internal DateTime ExpiryTime { get; init; }
+            internal DateTime ExpiryDateTime { get; init; }
         }
 
-        private List<OTPData> temporaryStoredOTPS = new List<OTPData>();
+        public List<OTPData> temporaryStoredOTPS = new List<OTPData>();
 
         private void RemoveExpiredOTPS()
         {
@@ -33,18 +33,13 @@ namespace BTCodeCraftersChallenge
         public string GenerateTOTP(long userId, DateTime dateTime)
         {
             string combinedData = $"{userId.ToString()}{dateTime.ToString("yyyyMMddHHmmss")}";
-            Console.WriteLine($"combinedData: {combinedData}");
-
-
+            Console.WriteLine(combinedData);
             int hashCode = combinedData.GetHashCode();
             if (hashCode < 0) hashCode *= -1;
-            Console.WriteLine($"hashCode: {hashCode}");
 
             DateTime currentDateTime = DateTime.Now;
 
-
             DateTime expiryTime = currentDateTime.AddSeconds(ValidityPeriodSeconds);
-
 
             string otp = (hashCode % 1000000).ToString("D6");
             temporaryStoredOTPS.Add(new OTPData(otp, expiryTime));
@@ -59,19 +54,13 @@ namespace BTCodeCraftersChallenge
         private bool IsOTPExpired(OTPData otp)
         {
             DateTime currentTime = DateTime.Now;
-            Console.WriteLine(currentTime);
-            Console.WriteLine(otp.ExpiryTime);
-            Console.WriteLine((currentTime - otp.ExpiryTime).TotalSeconds);
-            return ((currentTime - otp.ExpiryTime).TotalSeconds > ValidityPeriodSeconds);
+            return ((currentTime - otp.ExpiryDateTime).TotalSeconds > ValidityPeriodSeconds);
         }
 
         public bool ValidateOTP(string otp)
         {
             OTPData issuedOTP = temporaryStoredOTPS.Find(x => x.Otp.Equals(otp));
             if (issuedOTP.Otp == "") return false;
-            // Console.WriteLine("acesta este otp-ul");
-            //Console.WriteLine(issuedOTP);
-
 
             if (IsOTPExpired(issuedOTP))
             {
