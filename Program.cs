@@ -6,12 +6,14 @@
         {
             long userId = 42;
             DateTime dateTime = DateTime.Now;
-            Console.WriteLine(dateTime);
-
             TOTPSystem totpGenerator = new TOTPSystem();
+
             string otp = totpGenerator.GenerateTOTP(userId, dateTime);
-            bool isValid = totpGenerator.ValidateOTP(otp);
-            Console.WriteLine($"Is TOTP valid? {isValid}");
+            bool isTOTPValid = totpGenerator.ValidateOTP(otp);
+            Console.WriteLine($"TOTP validity: {isTOTPValid}");
+            Console.WriteLine("TOTP will expire soon...");
+            Thread.Sleep(1000 * 30);
+            Console.WriteLine($"TOTP validity: {totpGenerator.ValidateOTP(otp)}");
         }
 
     }

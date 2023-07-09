@@ -33,20 +33,19 @@ namespace BTCodeCraftersChallenge
         public string GenerateTOTP(long userId, DateTime dateTime)
         {
             string combinedData = $"{userId.ToString()}{dateTime.ToString("yyyyMMddHHmmss")}";
-            Console.WriteLine(combinedData);
             int hashCode = combinedData.GetHashCode();
             if (hashCode < 0) hashCode *= -1;
 
             DateTime currentDateTime = DateTime.Now;
 
-            DateTime expiryTime = currentDateTime.AddSeconds(ValidityPeriodSeconds);
+            DateTime expiryDateTime = currentDateTime.AddSeconds(ValidityPeriodSeconds);
 
             string otp = (hashCode % 1000000).ToString("D6");
-            temporaryStoredOTPS.Add(new OTPData(otp, expiryTime));
+            temporaryStoredOTPS.Add(new OTPData(otp, expiryDateTime));
 
-            Console.WriteLine($"Generated TOTP: {otp}");
-            Console.WriteLine($"Validity period: {ValidityPeriodSeconds} seconds");
-            Console.WriteLine($"Expiry time: {expiryTime}");
+            Console.WriteLine($"Generated TOTP is: {otp}");
+            Console.WriteLine($"Validity period is: {ValidityPeriodSeconds} seconds");
+            Console.WriteLine($"Expiry time is: {expiryDateTime}");
 
             return otp;
         }
@@ -54,7 +53,7 @@ namespace BTCodeCraftersChallenge
         private bool IsOTPExpired(OTPData otp)
         {
             DateTime currentTime = DateTime.Now;
-            return ((currentTime - otp.ExpiryDateTime).TotalSeconds > ValidityPeriodSeconds);
+            return ((currentTime - otp.ExpiryDateTime).TotalSeconds > 0);
         }
 
         public bool ValidateOTP(string otp)
